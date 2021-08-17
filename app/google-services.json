@@ -1,0 +1,150 @@
+{
+  "project_info": {
+    "project_number": "997017367644",
+    "project_id": "tokobuku-88f1a",
+    "storage_bucket": "tokobuku-88f1a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:997017367644:android:67271fa128668abc3d6299",
+        "android_client_info": {
+          "package_name": "com.ifan.tokobuku"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "997017367644-65q64viem4l7as534oi8cii20fcuu35u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ifan.tokobuku",
+            "certificate_hash": "9ab8bcd36b524f7f209c9ff6bfc3ba608479b936"
+          }
+        },
+        {
+          "client_id": "997017367644-2s94c1geca414lgoqg280s58mptef3oi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7tXFon2c84zqrrkVdd3TQyFJhiTxCGpo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "997017367644-2s94c1geca414lgoqg280s58mptef3oi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:997017367644:android:d10893e086fa01a53d6299",
+        "android_client_info": {
+          "package_name": "com.ifan.tokobuku2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "997017367644-alo5378kgdv3uevbtd42jfbpe5454m73.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ifan.tokobuku2",
+            "certificate_hash": "9ab8bcd36b524f7f209c9ff6bfc3ba608479b936"
+          }
+        },
+        {
+          "client_id": "997017367644-2s94c1geca414lgoqg280s58mptef3oi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7tXFon2c84zqrrkVdd3TQyFJhiTxCGpo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "997017367644-2s94c1geca414lgoqg280s58mptef3oi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:997017367644:android:239e4fded4fd8a523d6299",
+        "android_client_info": {
+          "package_name": "com.ifanferdi.aplikasitokobuku"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "997017367644-2s94c1geca414lgoqg280s58mptef3oi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7tXFon2c84zqrrkVdd3TQyFJhiTxCGpo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "997017367644-2s94c1geca414lgoqg280s58mptef3oi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:997017367644:android:e27a3b07492063e93d6299",
+        "android_client_info": {
+          "package_name": "com.ifanferdi.aplikasitokobukuv2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "997017367644-2d7440mlsnuglrbe28es1psalbsq8ph7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ifanferdi.aplikasitokobukuv2",
+            "certificate_hash": "6312e2d0af68c05c80d36da7a06ddc0156f9df6a"
+          }
+        },
+        {
+          "client_id": "997017367644-2s94c1geca414lgoqg280s58mptef3oi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7tXFon2c84zqrrkVdd3TQyFJhiTxCGpo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "997017367644-2s94c1geca414lgoqg280s58mptef3oi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Arya Duta</string>
+
+    <string-array name="status">
+        <item>- Pilih Status -</item>
+        <item>Belum Dibayar</item>
+        <item>Menunggu Konfirmasi Pembayaran</item>
+        <item>Mempersiapkan Pengiriman</item>
+        <item>Sedang Dikirim</item>
+        <item>Pesanan Diterima</item>
+    </string-array>
+</resources>

@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.HomeAdmin">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:id="@+id/title_card"
+       android:layout_width="match_parent"
+       android:layout_height="85dp"
+       android:background="@color/colorPrimary"
+       android:elevation="10dp"
+       android:padding="5dp"
+       tools:ignore="MissingConstraints">
+
+      <TextView
+          android:id="@+id/text_nama"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="15dp"
+          android:layout_marginTop="5dp"
+          android:fontFamily="sans-serif-black"
+          android:textColor="@color/colorWhite"
+          android:textSize="22sp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          tools:ignore="MissingConstraints" />
+
+      <TextView
+          android:id="@+id/text_email"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="15dp"
+          android:layout_marginTop="2dp"
+          android:fontFamily="sans-serif"
+          android:textColor="@color/colorWhite"
+          android:textStyle="italic"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/text_nama"
+          tools:ignore="MissingConstraints" />
+
+      <TextView
+          android:id="@+id/text_role"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="15dp"
+          android:layout_marginTop="2dp"
+          android:fontFamily="sans-serif"
+          android:textColor="@color/colorWhite"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/text_email"
+          tools:ignore="MissingConstraints" />
+
+      <Button
+          android:id="@+id/btn_logout"
+          android:layout_width="wrap_content"
+          android:layout_height="20dp"
+          android:layout_marginTop="10dp"
+          android:background="@color/colorTransparant"
+          android:shadowColor="@color/colorTransparant"
+          android:text="Logout"
+          android:textColor="@color/colorWhite"
+          android:textStyle="bold"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          tools:ignore="MissingConstraints" />
+
+      <Button
+          android:id="@+id/btn_verify"
+          android:layout_width="wrap_content"
+          android:layout_height="30dp"
+          android:layout_marginTop="8dp"
+          android:background="@drawable/bg_border_yellow"
+          android:padding="5dp"
+          android:shadowColor="@color/colorTransparant"
+          android:text="Verify Now!"
+          android:textColor="@color/colorWhite"
+          android:textStyle="bold"
+          android:visibility="gone"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/btn_logout"
+          tools:ignore="MissingConstraints" />
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_below="@+id/title_card"
+       app:layout_constraintTop_toBottomOf="@+id/title_card">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">
+
+         <androidx.constraintlayout.widget.ConstraintLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:id="@+id/data_buku"
+                android:layout_width="140dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:background="@drawable/card_admin_bg"
+                android:elevation="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/data_transaksi"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+
+                  <TextView
+                      android:id="@+id/title_buku"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Data Buku"
+                      android:textColor="@color/colorWhite"
+                      android:textSize="20dp"
+                      android:textStyle="bold"
+                      app:layout_constraintBottom_toBottomOf="parent"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                      tools:ignore="MissingConstraints" />
+
+                  <ImageView
+                      android:id="@+id/imageView3"
+                      android:layout_width="80dp"
+                      android:layout_height="80dp"
+                      android:padding="8dp"
+                      android:layout_marginTop="10dp"
+                      android:src="@drawable/ic_book"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toTopOf="parent" />
+               </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/data_transaksi"
+                android:layout_width="140dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:background="@drawable/card_admin_bg"
+                android:elevation="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/data_buku"
+                app:layout_constraintTop_toTopOf="parent">
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+
+                  <TextView
+                      android:id="@+id/title_transaksi"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Data \nTransaksi"
+                      android:textAlignment="center"
+                      android:textColor="@color/colorWhite"
+                      android:textSize="20dp"
+                      android:textStyle="bold"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toBottomOf="@+id/imageView4"
+                      tools:ignore="MissingConstraints" />
+
+                  <ImageView
+                      android:id="@+id/imageView4"
+                      android:layout_width="80dp"
+                      android:layout_height="80dp"
+                      android:layout_marginTop="7dp"
+                      android:padding="8dp"
+                      android:src="@drawable/ic_pembelian"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toTopOf="parent" />
+               </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+         <androidx.constraintlayout.widget.ConstraintLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:id="@+id/data_distributor"
+                android:layout_width="140dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:background="@drawable/card_admin_bg"
+                android:elevation="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/data_pasok"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+
+                  <TextView
+                      android:id="@+id/title_distributor"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Data \nDistributor"
+                      android:textAlignment="center"
+                      android:textColor="@color/colorWhite"
+                      android:textSize="20dp"
+                      android:textStyle="bold"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toBottomOf="@+id/imageView5"
+                      tools:ignore="MissingConstraints" />
+
+                  <ImageView
+                      android:id="@+id/imageView5"
+                      android:layout_width="80dp"
+                      android:layout_height="80dp"
+                      android:layout_marginTop="7dp"
+                      android:padding="8dp"
+                      android:src="@drawable/ic_button_distributor"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toTopOf="parent" />
+               </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/data_pasok"
+                android:layout_width="140dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:background="@drawable/card_admin_bg"
+                android:elevation="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/data_distributor"
+                app:layout_constraintTop_toTopOf="parent">
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+
+                  <TextView
+                      android:id="@+id/title_pasok"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Data Pasok"
+                      android:textColor="@color/colorWhite"
+                      android:textSize="20dp"
+                      android:textStyle="bold"
+                      app:layout_constraintBottom_toBottomOf="parent"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toBottomOf="@+id/imageView7"/>
+
+                  <ImageView
+                      android:id="@+id/imageView7"
+                      android:layout_width="80dp"
+                      android:layout_height="80dp"
+                      android:layout_marginTop="10dp"
+                      android:padding="8dp"
+                      android:src="@drawable/ic_button_pasok"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toTopOf="parent" />
+               </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+         </androidx.constraintlayout.widget.ConstraintLayout>
+
+         <LinearLayout
+             android:id="@+id/data_pengguna"
+             android:layout_width="140dp"
+             android:layout_height="150dp"
+             android:layout_gravity="center"
+             android:layout_marginTop="20dp"
+             android:background="@drawable/card_admin_bg"
+             android:elevation="10dp"
+             android:orientation="horizontal">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+               <TextView
+                   android:id="@+id/title_pengguna"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Data \nPengguna"
+                   android:textAlignment="center"
+                   android:textColor="@color/colorWhite"
+                   android:textSize="20dp"
+                   android:textStyle="bold"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/imageView8"
+                   tools:ignore="MissingConstraints" />
+
+               <ImageView
+                   android:id="@+id/imageView8"
+                   android:layout_width="80dp"
+                   android:layout_height="80dp"
+                   android:layout_marginTop="7dp"
+                   android:padding="8dp"
+                   android:src="@drawable/ic_user"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+         </LinearLayout>
+      </LinearLayout>
+   </ScrollView>
+
+</RelativeLayout>

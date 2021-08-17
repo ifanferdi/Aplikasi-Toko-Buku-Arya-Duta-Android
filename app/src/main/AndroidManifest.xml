@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ifanferdi.aplikasitokobukuv2">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:requestLegacyExternalStorage="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo_arya_duta_png"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo_arya_duta_png"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activity.UploadBuktiPembayaran"></activity>
+        <activity android:name=".Activity.LihatBuktiPembayaran" />
+        <activity android:name=".Activity.EditDetailTransaksi" />
+        <activity android:name=".Activity.DetailTransaksi" />
+        <activity android:name=".Activity.DetailRiwayatTransaksi" />
+        <activity android:name=".Activity.RiwayatTransaksi" />
+        <activity android:name=".Activity.CheckoutKeranjang" />
+        <activity android:name=".Activity.FormPasok" />
+        <activity android:name=".Activity.FormDistributor" />
+        <activity android:name=".Activity.DataPasok" />
+        <activity android:name=".Activity.DataDistributor"/>
+        <activity android:name=".Activity.Keranjang" />
+        <activity android:name=".Activity.UbahPassword" />
+        <activity android:name=".Activity.ProfilPengguna" />
+        <activity android:name=".Activity.DetailKatalogBuku" />
+        <activity android:name=".Activity.KatalogBuku" />
+        <activity android:name=".Activity.DataTransaksi" />
+        <activity android:name=".Activity.FormBuku" />
+        <activity android:name=".Activity.DataBuku" />
+        <activity android:name=".Activity.DataUser" />
+        <activity android:name=".Activity.SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity.RegisterActivity" />
+        <activity android:name=".Activity.LoginActivity" />
+        <activity android:name=".Activity.HomeAdmin" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

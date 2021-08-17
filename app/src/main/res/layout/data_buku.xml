@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_buku"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="2dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="9dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image_buku"
+                android:layout_width="70dp"
+                android:layout_height="0dp"
+                android:padding="3dp"
+                android:src="@drawable/books"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_judul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Judul"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintStart_toEndOf="@+id/image_buku"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_tahun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="(Tahun)"
+                
+                app:layout_constraintStart_toEndOf="@+id/text_judul"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_penulis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Penulis"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintStart_toEndOf="@+id/image_buku"
+                app:layout_constraintTop_toBottomOf="@+id/text_judul" />
+
+            <TextView
+                android:id="@+id/strip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text="-"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintStart_toEndOf="@+id/text_penulis"
+                app:layout_constraintTop_toBottomOf="@+id/text_judul" />
+
+            <TextView
+                android:id="@+id/text_penerbit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:text="Penerbit"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintStart_toEndOf="@+id/strip"
+                app:layout_constraintTop_toBottomOf="@+id/text_judul" />
+
+            <TextView
+                android:id="@+id/text_kategori"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="3dp"
+                android:text="Kategori"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintStart_toEndOf="@+id/image_buku"
+                app:layout_constraintTop_toBottomOf="@+id/text_penulis" />
+
+            <TextView
+                android:id="@+id/text_harga"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginLeft="10dp"
+                android:text="50000"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintStart_toEndOf="@+id/image_buku"
+                app:layout_constraintTop_toBottomOf="@+id/text_kategori" />
+
+            <TextView
+                android:id="@+id/strip2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:text="-"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintStart_toEndOf="@+id/text_harga"
+                app:layout_constraintTop_toBottomOf="@+id/text_kategori" />
+
+            <TextView
+                android:id="@+id/diskon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="3dp"
+                android:text="Diskon:"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintStart_toEndOf="@+id/strip2"
+                app:layout_constraintTop_toBottomOf="@+id/text_kategori" />
+
+            <TextView
+                android:id="@+id/text_diskon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:text="50"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintStart_toEndOf="@+id/diskon"
+                app:layout_constraintTop_toBottomOf="@+id/text_kategori" />
+
+            <TextView
+                android:id="@+id/stok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="3dp"
+                android:text="Stok:"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintStart_toEndOf="@+id/image_buku"
+                app:layout_constraintTop_toBottomOf="@+id/text_harga" />
+
+            <TextView
+                android:id="@+id/text_stok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="3dp"
+                android:text="200"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintStart_toEndOf="@+id/stok"
+                app:layout_constraintTop_toBottomOf="@+id/text_harga" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

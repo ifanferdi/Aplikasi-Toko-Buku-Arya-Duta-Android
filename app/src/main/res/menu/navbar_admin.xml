@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/buku"
+        android:title="Buku"
+        android:icon="@drawable/ic_books"/>
+
+    <item
+        android:id="@+id/transaki"
+        android:title="Transaksi"
+        android:icon="@drawable/ic_payment"/>
+
+    <item
+        android:id="@+id/distributor"
+        android:title="Distributor"
+        android:icon="@drawable/ic_distributor"/>
+
+    <item
+        android:id="@+id/pasok"
+        android:title="Pasok"
+        android:icon="@drawable/ic_pasok"/>
+
+    <item
+        android:id="@+id/pengguna"
+        android:title="Pengguna"
+        android:icon="@drawable/ic_profile"/>
+</menu>

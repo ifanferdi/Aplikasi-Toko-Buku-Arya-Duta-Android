@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.DetailKatalogBuku">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/div"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/colorPrimary"
+            android:elevation="10dp"
+            android:gravity="center_vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:theme="@style/AppTheme.AppBarOverlay">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/bg_btn"
+                    android:layout_width="50dp"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_back"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="@+id/bg_btn"
+                        app:layout_constraintEnd_toEndOf="@+id/bg_btn"
+                        app:layout_constraintStart_toStartOf="@+id/bg_btn"
+                        app:layout_constraintTop_toTopOf="@+id/bg_btn" />
+
+                    <Button
+                        android:id="@+id/btn_back"
+                        android:layout_width="50dp"
+                        android:layout_height="0dp"
+                        android:background="@color/colorTransparant"
+                        android:padding="-40dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/text_judulbuku"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:maxLines="1"
+                    android:text="Ini judul buku yang cukup panjang "
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/bg_cart"
+                    app:layout_constraintStart_toEndOf="@+id/bg_btn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/bg_cart"
+                    android:layout_width="55dp"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageView
+                        android:id="@+id/img_cart"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/ic_baseline_shopping_cart_24"
+                        android:textAlignment="center"
+                        app:layout_constraintBottom_toBottomOf="@+id/bg_cart"
+                        app:layout_constraintEnd_toEndOf="@+id/bg_cart"
+                        app:layout_constraintStart_toStartOf="@+id/bg_cart"
+                        app:layout_constraintTop_toTopOf="@+id/bg_cart" />
+
+                    <ImageView
+                        android:id="@+id/text_cart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginBottom="23dp"
+                        android:src="@drawable/notif_keranjang"
+                        android:textSize="11sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/img_cart"
+                        app:layout_constraintEnd_toEndOf="@+id/img_cart" />
+
+                    <Button
+                        android:id="@+id/btn_cart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorTransparant"
+                        android:padding="-40dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/books" />
+
+                    <View
+                        android:id="@+id/divider0"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="?android:attr/listDivider"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+                    <TextView
+                        android:id="@+id/text_namabuku"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="Nama Buku"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/divider0" />
+
+                    <TextView
+                        android:id="@+id/text_hargabuku"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="Harga Buku"
+                        android:textColor="#535353"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_namabuku" />
+
+                    <TextView
+                        android:id="@+id/text_diskon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/bg_diskon"
+                        android:padding="3dp"
+                        android:text="100%"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="8sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/text_hargabuku"
+                        app:layout_constraintStart_toEndOf="@+id/text_hargabuku"
+                        app:layout_constraintTop_toTopOf="@+id/text_hargabuku" />
+
+                    <TextView
+                        android:id="@+id/text_stokbuku"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="Stok : "
+                        android:textColor="#535353"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_hargabuku" />
+
+                    <TextView
+                        android:id="@+id/text_stok"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="10"
+                        android:textColor="#535353"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/text_stokbuku"
+                        app:layout_constraintTop_toBottomOf="@+id/text_hargabuku" />
+
+                    <View
+                        android:id="@+id/divider_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="?android:attr/listDivider"
+                        app:layout_constraintBottom_toTopOf="@+id/text_deskripsi"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_deskripsi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="Deskripsi"
+                        android:textColor="#535353"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_stok" />
+
+                    <View
+                        android:id="@+id/divider_desc2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="?android:attr/listDivider"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_deskripsi" />
+
+                    <TextView
+                        android:id="@+id/judul"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Judul"
+                        android:textColor="#535353"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/divider_desc2" />
+
+                    <TextView
+                        android:id="@+id/text_titik"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text=": "
+                        android:textColor="#535353"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/judul"
+                        app:layout_constraintTop_toBottomOf="@+id/divider_desc2" />
+
+                    <TextView
+                        android:id="@+id/text_judul"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Judul"
+                        android:textColor="#535353"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="@+id/divider_desc2"
+                        app:layout_constraintStart_toEndOf="@+id/text_titik"
+                        app:layout_constraintTop_toBottomOf="@+id/divider_desc2" />
+
+                    <View
+                        android:id="@+id/divider_judul"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="?android:attr/listDivider"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_judul" />
+
+                    <TextView
+                        android:id="@+id/isbn"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="No ISBN"
+                        android:textColor="#535353"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/divider_judul" />
+
+                    <TextView
+                        android:id="@+id/text_titik4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text=": "
+                        android:textColor="#535353"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/isbn"
+                        app:layout_constraintTop_toBottomOf="@+id/divider_judul" />
+
+                    <TextView
+                        android:id="@+id/text_noisbn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="ISBN"
+                        android:textColor="#535353"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="@+id/divider_judul"
+                        app:layout_constraintStart_toEndOf="@+id/text_titik4"
+                        app:layout_constraintTop_toBottomOf="@+id/divider_judul" />
+
+                    <View
+                        android:id="@+id/divider_isbn"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="?android:attr/listDivider"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_noisbn" />
+
+                    <TextView
+                        android:id="@+id/penulis"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Penulis"
+                        android:textColor="#535353"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/divider_isbn" />
+
+                    <TextView
+                        android:id="@+id/text_titik2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text=": "
+                        android:textColor="#535353"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/penulis"
+                        app:layout_constraintTop_toBottomOf="@+id/divider_isbn" />
+
+                    <TextView
+                        android:id="@+id/text_penulis"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Penulis"
+                        android:textColor="#535353"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="@+id/divider_isbn"
+                        app:layout_constraintStart_toEndOf="@+id/text_titik2"
+                        app:layout_constraintTop_toBottomOf="@+id/divider_isbn" />
+
+                    <View
+                        android:id="@+id/divider_penulis"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="?android:attr/listDivider"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_penulis" />
+
+                    <TextView
+                        android:id="@+id/penerbit"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Penerbit"
+                        android:textColor="#535353"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/divider_penulis" />
+
+                    <TextView
+                        android:id="@+id/text_titik3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text=": "
+                        android:textColor="#535353"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/penerbit"
+                        app:layout_constraintTop_toBottomOf="@+id/divider_penulis" />
+
+                    <TextView
+                        android:id="@+id/text_penerbit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Penerbit"
+                        android:textColor="#535353"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="@+id/divider_penulis"
+                        app:layout_constraintStart_toEndOf="@+id/text_titik3"
+                        app:layout_constraintTop_toBottomOf="@+id/divider_penulis" />
+
+                    <View
+                        android:id="@+id/divider_penerbit"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="?android:attr/listDivider"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_penerbit" />
+
+                    <TextView
+                        android:id="@+id/tahun"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Tahun"
+                        android:textColor="#535353"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/divider_penerbit" />
+
+                    <TextView
+                        android:id="@+id/text_titik5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text=": "
+                        android:textColor="#535353"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/penerbit"
+                        app:layout_constraintTop_toBottomOf="@+id/divider_penerbit" />
+
+                    <TextView
+                        android:id="@+id/text_tahun"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Tahun"
+                        android:textColor="#535353"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="@+id/divider_penerbit"
+                        app:layout_constraintStart_toEndOf="@+id/text_titik5"
+                        app:layout_constraintTop_toBottomOf="@+id/divider_penerbit" />
+
+                    <View
+                        android:id="@+id/divider_tahun"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="?android:attr/listDivider"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_tahun" />
+
+                    <TextView
+                        android:id="@+id/kategori"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Kategori"
+                        android:textColor="#535353"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/divider_tahun" />
+
+                    <TextView
+                        android:id="@+id/text_titik6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text=": "
+                        android:textColor="#535353"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/tahun"
+                        app:layout_constraintTop_toBottomOf="@+id/divider_tahun" />
+
+                    <TextView
+                        android:id="@+id/text_kategori"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Kategori"
+                        android:textColor="#535353"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="@+id/divider_tahun"
+                        app:layout_constraintStart_toEndOf="@+id/text_titik6"
+                        app:layout_constraintTop_toBottomOf="@+id/divider_tahun" />
+
+                    <View
+                        android:id="@+id/divider_kategori"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="?android:attr/listDivider"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_kategori" />
+
+                    <TextView
+                        android:id="@+id/keterangan"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Keterangan"
+                        android:textColor="#535353"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/divider_kategori" />
+
+                    <TextView
+                        android:id="@+id/text_titik7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text=": "
+                        android:textColor="#535353"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/keterangan"
+                        app:layout_constraintTop_toBottomOf="@+id/divider_kategori" />
+
+                    <TextView
+                        android:id="@+id/text_keterangan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Sinopsis"
+                        android:textColor="#535353"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="@+id/divider_tahun"
+                        app:layout_constraintStart_toEndOf="@+id/text_titik7"
+                        app:layout_constraintTop_toBottomOf="@+id/divider_kategori" />
+
+                    <View
+                        android:id="@+id/divider_keterangan"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="?android:attr/listDivider"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_keterangan" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/div"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/keranjang"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/keranjang"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite"
+        android:elevation="10dp"
+        android:gravity="center_vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <Button
+                android:id="@+id/btn_keranjang"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:text="Tambahkan ke keranjang"
+                android:textAllCaps="false"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:drawablePadding="20dp"
+                android:drawableStart="@drawable/ic_baseline_add_shopping_cart_24"
+                android:background="@drawable/bg_button_primary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</RelativeLayout>
